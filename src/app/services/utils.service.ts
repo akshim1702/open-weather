@@ -94,6 +94,7 @@ export class UtilsService {
 
   convertToKmPerHour(metersPerSecond: number) {
     // Conversion factor from m/s to km/h is 3.6
-    return metersPerSecond * 3.6;
+    let windSpeed = metersPerSecond * 3.6
+    return windSpeed.toFixed(2);
   }
 }
