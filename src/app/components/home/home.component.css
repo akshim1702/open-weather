@@ -1,0 +1,18 @@
+.form-desg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.form-desg form {
+  /* border: 1px solid black; */
+  padding: 2rem;
+  border-radius: 5px;
+  background: var(--background-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+form div,form label{
+  background: inherit;
+}

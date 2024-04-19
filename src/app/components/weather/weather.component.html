@@ -1,0 +1,74 @@
+<div class="container weather-container">
+  <div class="weather-main background-body">
+    <div class="row background-body">
+      <div class="col-4 card-container background-body">
+        <div class="card-div">
+          <div class="w-100">
+            <img
+              [src]="
+                'https://openweathermap.org/img/wn/' +
+                JsonData?.weather[0]?.icon +
+                '@4x.png'
+              "
+              alt=""
+            />
+            <span style="font-size: 1.5rem;">{{
+              weatherDetails["Weather Condition"] || "Detailed Description"
+                | capitalizeFirst
+            }}</span>
+          </div>
+
+          <div class="card-data-sec">
+            <div style="font-size: 5rem">
+              <span>
+                {{ weatherDetails["Temperature"] || "0 °C" | uppercase }}
+              </span>
+            </div>
+
+            <div style="font-size: 1.5rem">
+              <span>
+                {{
+                  weatherDetails["Location Name"] || "City" | capitalizeFirst
+                }} </span
+              >,&nbsp;
+              <span> {{ weatherDetails["Country"] || "CC" | uppercase }} </span>
+            </div>
+
+            <div style="font-size: 2rem">{{localDate}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 weather-table background-body">
+        <table class="table table-borderless my-2 background-body table-desg">
+          <tbody>
+            <tr *ngFor="let item of weatherDetails | keyvalue">
+              <th scope="row">{{ item.key }}</th>
+              <td>{{ item.value }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-div mx-2 my-2 background-body">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <i class="bi bi-database"></i> Weather Data
+          </button>
+          <a class="btn btn-outline-dark" routerLink="/"
+            ><i class="bi bi-fast-forward-circle"></i> Home</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-json-modal [weatherDetails]="JsonData"></app-json-modal>
+
+<ngx-loading
+  [show]="loading"
+  [config]="utils.config"
+  
+></ngx-loading>

@@ -1,0 +1,68 @@
+.weather-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.weather-main {
+  border: 1px solid blue;
+  border-radius: 4px;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-main h2 {
+}
+
+.weather-table {
+  border-radius: 20px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-div {
+  color: white;
+  background: rgb(19, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(19, 0, 36, 1) 0%,
+    rgba(14, 122, 114, 0.8939950980392157) 57%
+  );
+
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.btn-div {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-div a {
+  text-decoration: none;
+}
+
+
+.card-data-sec{
+  padding: 1rem;
+  width: 100%;
+}

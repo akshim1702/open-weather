@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+  --color-font:black;
+  --background-color:white;
+  
+}
+
+body{
+  height: 100vh;
+  background-image: linear-gradient(45deg, #232435, #35415f);
+}
+
+
+
+pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.key {
+  color: #9cdcfe;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.number {
+  color: #b5cea8;
+}
+
+.boolean {
+  color: #569cd6;
+}
+
+.null {
+  color: #569cd6;
+}
+
+
+.background-body{
+  background-image: linear-gradient(45deg,var(--background-color),var(--background-color));
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+} */
+ 
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: #888; 
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} */

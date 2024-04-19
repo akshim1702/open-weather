@@ -1,0 +1,48 @@
+<div class="d-flex form-desg">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="country" class="form-label">Country</label>
+      <select id="country" class="form-select" formControlName="country">
+        <option value="">Select a country</option>
+        <option *ngFor="let country of countries" [value]="country.id">
+          {{ country.name }}
+        </option>
+      </select>
+      <div
+        id="country-err"
+        class="form-text"
+        *ngIf="form?.get('country')?.touched && form?.get('country')?.errors?.['required']"
+        style="color: red"
+      >
+        Country is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="state" class="form-label">State</label>
+      <select id="state" class="form-select" formControlName="state">
+        <option value="">Select a state</option>
+        <option *ngFor="let state of states" [value]="state.id">
+          {{ state.name }}
+        </option>
+      </select>
+      <div
+        id="state-err"
+        class="form-text"
+        *ngIf="states.length > 0 && form?.get('state')?.touched && form?.get('state')?.errors?.['required']"
+        style="color: red"
+      >
+        State is required.
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-outline-primary"
+      [disabled]="states.length == 0 ? false : form.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
+<ngx-loading [show]="loading" [config]="utils.config"></ngx-loading>
