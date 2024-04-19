@@ -18,30 +18,9 @@ export class UtilsService {
     backdropBorderRadius: '3px',
   };
 
-  public months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
+  public months = ['Jan','Feb','Mar','Apr', 'May','Jun','Jul', 'Aug','Sep','Oct','Nov','Dec'];
 
-  public days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
+  public days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
   kelvinToCelsius(kelvin: any) {
     // Formula to convert Kelvin to Celsius: Celsius = Kelvin - 273.15
